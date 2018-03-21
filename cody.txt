@@ -1,0 +1,17 @@
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+FILE TO KEEP TRACK OF WHAT IM DOING
+
+base built from djangogirls course. will add ideas for expansion here as they occur. CURRENT_LEFT_FROM = https://tutorial.djangogirls.org/en/
+SECTION  == 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+-views and templates for other pages of personal site.
+-
+-
+-
+-
+-
+-
+-
