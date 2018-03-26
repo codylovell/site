@@ -15,7 +15,7 @@ class Post(models.Model):
 		blank=True, null=True)
 
 
-	def publsish(self):
+	def publish(self):
 		self.published_date = timezone.now()
 		self.save()
 
