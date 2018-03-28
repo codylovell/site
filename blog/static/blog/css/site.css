@@ -94,3 +94,9 @@ h1, h2, h3, h4 {
 .user {
 	border-bottom: 3px solid black;
 }
+
+/* social media svgs */
+.fab {
+	font-size: 3em;
+	color: darkgreen;
+}
