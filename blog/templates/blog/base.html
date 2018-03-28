@@ -6,7 +6,7 @@
 	<title>codyLovell.com</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="{%	static 'css/blog.css' %}">
+	<link rel="stylesheet" href="{%	static 'blog/css/blog.css' %}">
 </head>
 
 <body>
@@ -24,6 +24,13 @@
     	{% endif %}
     	<h1><a href="/">Cody Lovell's Blog</a></h1>
 	</div>
+
+	<nav class="sidebar">
+		<a href="{% url 'about' %}">About</a>
+		<a href="{% url 'post_list' %}">Blog</a>
+		<a href="#">Contact</a>
+		<a href="#">Projects</a>
+	</nav>
 
 	<div class='container'>
 		<div class="row">
