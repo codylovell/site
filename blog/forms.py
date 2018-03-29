@@ -1,10 +1,13 @@
 from django import forms
 
+from pagedown.widgets import PagedownWidget
+
 from .models import Post, Comment
 
 
 class PostForm(forms.ModelForm):
 	"""docstring for PostForm"""
+	text = forms.CharField(widget=PagedownWidget)
 
 
 	class Meta:
