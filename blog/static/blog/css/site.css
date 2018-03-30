@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
-/* sidebar */
+/* sidebar 
 .sidebar {
 	width: 130px;
     position: fixed;
@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
 
 .sidebar a:hover {
     color: #064579;
-}
+} */
 
 /* comments */
 .comment {

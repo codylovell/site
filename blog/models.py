@@ -3,6 +3,9 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from django.utils.safestring import mark_safe
+
+from markdown_deux import markdown
 
 
 class Post(models.Model):
@@ -19,6 +22,11 @@ class Post(models.Model):
 	def publish(self):
 		self.published_date = timezone.now()
 		self.save()
+
+	def get_markdown(self):
+		text = self.text
+		markdown_text = markdown(text)
+		return mark_safe(markdown_text)
 
 
 	def __str__(self):
