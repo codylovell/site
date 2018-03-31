@@ -3,15 +3,21 @@
 {% block content %}
 	{% for post in posts %}
 		{% if post.published_date %}
-		    <article class='posts'>
-		        	<div class='date'>
-		        		<p>published: {{ post.published_date }}</p>
-		        	</div>
-		        	<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-		        	<p class="content-markdown">{{ post.text|safe }}</p>
+		    <div class="container">
+			    <div class='card posts text-light bg-dark'>
+			        	<div class='date'>
+			        		<p>published: {{ post.published_date }}</p>
+			        	</div>
+			        	<h1 class="card-title">{{ post.title }}</a></h1>
+			        	<p class="card-body content-markdown">{{ post.text|safe|truncatechars:100 }}</p>
 
-		        	<a href="{% url 'post_detail' pk=post.pk %]">Comments: {{ post.comments.count }} </a>
-		    </article>
+			        	<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }} </a>
+
+			        	<a href="{% url 'post_detail' pk=post.pk %}">
+			        		<button type="button" class="btn btn-secondary">Read more</button>
+			        	</a>
+			    </div>
+			</div>
 		{% endif %}
 	{% endfor %}
 {% endblock %}
