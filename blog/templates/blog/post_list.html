@@ -3,7 +3,7 @@
 {% block content %}
 	{% for post in posts %}
 		{% if post.published_date %}
-		    <div class="container">
+		    <div class="container marked-content">
 			    <div class='card posts text-light bg-dark'>
 			        	<div class='date'>
 			        		<p>published: {{ post.published_date }}</p>
