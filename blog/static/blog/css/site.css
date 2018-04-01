@@ -1,5 +1,11 @@
 /*Main Content*/
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
+	height: 100%;
 	background-image: url('../img/background.jpg');
 	background-repeat:no-repeat;
 	background-size:100%;
@@ -11,16 +17,19 @@ body {
 	-moz-border-image: url(mtn.jpg) 0; /* Gecko 1.9.1 (Firefox 3.5) */
 	padding-left: 5px;
 	padding-top: 20px;
+	margin: 0 0 100px;
 }
 
 /* menu */
 .navbar{
+	background-color: #FFFFFF; opacity: 0.9; filter: alpha(opacity=80);
 	max-width: 15%;
 	padding-top: 30px;
 	margin: 0;
 }
 
-.navbar a {
+a.nav-link {
+	color: red;
 	vertical-align: middle;
 	text-transform: uppercase;
 	display: inline;
@@ -110,6 +119,19 @@ p {
     color: #000000;
 }
 
+/* Rounded corner solution*/
+.rounded {
+    -moz-border-radius:10px 10px 10px 10px;  // rounds corners for firefox
+    border-radius:10px 10px 10px 10px;  //rounds corners for other browsers
+    border:solid 1px #000;
+    background-color:#acf;
+    padding:10px;
+}
+
+div.card.bg-dark.social-list {
+	font-size: 25px;
+}
+
 /* sidebar 
 .sidebar {
 	width: 130px;
@@ -143,8 +165,14 @@ p {
 	border-bottom: 3px solid black;
 }
 
-/* social media svgs */
-.fab {
-	font-size: 3em;
-	color: darkgreen;
+footer.page-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+div.card {
+	width: 100%;
+
 }

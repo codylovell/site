@@ -21,9 +21,8 @@
     	<!-- glypgicon-plus is bootstrap that displays plus sign. -->
     	<div class="login">
 	    	{% if user.is_authenticated %}
-	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='glyphicon
-	    	 	glyphicon-plus'></span></a>
-	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post</span></a>
+	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts</span></a>
 	    	 	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
 	    	 {% else %}
 	    	 <div class="brand">
@@ -52,21 +51,6 @@
 						<a href="#" class="nav-link">Projects</a>
 					</li>
 
-					<div class="svg-links">
-						<li class="navbar-item">
-							<img src="../static/blog/img/github-logo.svg" class="svg">
-						</li>
-						<li class="navbar-item">
-							<img src="../static/blog/img/github-logo.svg" class="svg">
-						</li>
-						<li class="navbar-item">
-							<img src="../static/blog/img/github-logo.svg" class="svg">
-						</li>
-						<li class="navbar-item">
-							<img src="../static/blog/img/github-logo.svg" class="svg">
-						</li>
-					</div>
-
 				</ul>
 			</div>
 		</nav>
@@ -91,21 +75,18 @@
     <div class="container-fluid text-center text-md-left">
         <div class="row">
 
-            <!--First column-->
-            <div class="col-md-6">
-                <h5 class="text-uppercase">Footer Content</h5>
-                <p>H</p>
-            </div>
-
     <!--Copyright-->
-    <div class="footer-copyright py-3 text-center">
-        © 2018 Copyright:
-        <a href="https://codylovell.pythonanywhere.com"> codylovell.com </a>
+    <div class="card bg-dark">
+	    <div class="footer-copyright py-3 text-center card-title">
+	        <span class="card-body rounded">© 2018 Copyright:
+	        <a href="https://codylovell.pythonanywhere.com"> codylovell.com </a></span>
+	    </div>
     </div>
     <!--/.Copyright-->
 
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
 <script
 	src="http://code.jquery.com/jquery-1.12.4.min.js"
 	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -113,8 +94,6 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
