@@ -48,6 +48,8 @@ a.nav-link {
 .brand {
 	position: fixed;
 	left: 80%;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 500px;
 }
 
 .header h1{
@@ -60,7 +62,7 @@ h1.text {
 	color: #e5e5e5;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
     font-family: 'Lobster';
     color: #e5e5e5;
 }
@@ -159,6 +161,8 @@ div.card.bg-dark.social-list {
 /* comments */
 .comment {
 	margin: 20px 0px 20px 20px;
+	text-decoration: none;
+	color: #fff
 }
 
 .user {
