@@ -67,3 +67,6 @@ python manage.py runsslserver
 
 ##Site should be up
 1 - Point your webbrowser to 127.0.0.1:8000
+
+
+readme based on layout of https://github.com/sujinleeme/sujinlee.me/readme.me
