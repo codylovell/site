@@ -1,4 +1,4 @@
-# Sujin Lee's official website
+# Cody Lovell's official website
 A website for personal blogging and project.
 
 ## About
