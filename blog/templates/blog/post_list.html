@@ -9,7 +9,7 @@
 			        		<p>published: {{ post.published_date }}</p>
 			        	</div>
 			        	<h1 class="card-title">{{ post.title }}</a></h1>
-			        	<p class="card-body content-markdown">{{ post.text|truncatechars:100|safe }}</p>
+			        	<p class="card-body content-markdown">{{ post.get_markdown|truncatechars:100 }}</p>
 
 			        	<a href="{% url 'post_detail' pk=post.pk %}" class="comments" style="text-decoration: none;">Comments: {{ post.comments.count }} </a>
 
