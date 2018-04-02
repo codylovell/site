@@ -1,12 +1,18 @@
 {% extends 'blog/base.html' %}
 
+{% block brand %}
+	<div class="brand">
+	    <h1>Cody's Blog</h1>
+	</div>
+{% endblock %}
+
 {% block content %}
 	{% for post in posts %}
 		{% if post.published_date %}
 		    <div class="container marked-content">
 			    <div class='card posts text-light bg-dark'>
 			        	<div class='date'>
-			        		<p>published: {{ post.published_date }}</p>
+			        		<p>{{ post.published_date }}</p>
 			        	</div>
 			        	<h1 class="card-title">{{ post.title }}</a></h1>
 			        	<p class="card-body content-markdown">{{ post.get_markdown|truncatechars:100 }}</p>

@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="{%	static 'blog/css/site.css' %}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 	{% block head_extra %}{% endblock %}
 </head>
@@ -22,13 +24,11 @@
     	<!-- glypgicon-plus is bootstrap that displays plus sign. -->
     	<div class="login">
 	    	{% if user.is_authenticated %}
-	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post</span></a>
-	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts</span></a>
+	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post <i class="material-icons">add_circle</i></span></a>
+	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts <i class="material-icons">drafts</i></span></a>
 	    	 	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
 	    	 {% else %}
-	    	 <div class="brand">
-	            <h1>Cody Lovell</h1>
-	         </div>
+	    	 {% block brand %}{% endblock %}
 	        
 	    	{% endif %}
     	</div>
@@ -41,15 +41,19 @@
 				<ul class="navbar-nav flex-column">
 					<li class="navbar-item">
 						<a href="{% url 'about' %}" class="nav-link">About</a>
+						<i class="material-icons">face</i>
 				    </li>
 				    <li class="navbar-item">
 						<a href="{% url 'post_list' %}" class="nav-link">Blog</a>
+						<i class="material-icons">rss_feed</i>
 					</li>
 					<li class="navbar-item">
 						<a href="{% url 'contact' %}" class="nav-link">Contact</a>
+						<i class="material-icons">contact_mail</i>
 					</li>
 					<li class="navbar-item">
 						<a href="#" class="nav-link">Projects</a>
+						<i class="material-icons">work</i>
 					</li>
 
 				</ul>
