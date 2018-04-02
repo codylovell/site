@@ -20,6 +20,10 @@ body {
 	margin: 0 0 100px;
 }
 
+.about-me {
+	font-size: 20px;
+}
+
 /* menu */
 .navbar{
 	background-color: #FFFFFF; opacity: 0.9; filter: alpha(opacity=80);
@@ -92,9 +96,7 @@ p {
 /* cards for posts */
 .card {
 	margin-top: 15px;
-	padding-left: 15px;
-	padding-top: 5px;
-	padding-bottom: 10px;
+	padding: 20px 20px;
 }
 
 /* other stuff */
@@ -119,6 +121,11 @@ p {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+h1.post-title {
+	font-size: 60px;
+	color: #fff;
 }
 
 /* Rounded corner solution*/
@@ -179,4 +186,8 @@ footer.page-footer {
 div.card {
 	width: 100%;
 
+}
+
+div > #id_text_wmd_preview {
+	color: #000;
 }

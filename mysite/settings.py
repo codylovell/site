@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'contact',
 
     #third-party apps
+    'markdown_deux',
     'pagedown',
 ]
 
