@@ -65,7 +65,7 @@ python3 manage.py migrate
 python manage.py runsslserver
 ```
 
-##Site should be up
+## Site should be up
 1 - Point your webbrowser to 127.0.0.1:8000
 
 
