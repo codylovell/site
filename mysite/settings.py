@@ -40,14 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #third-party apps
+    'markdown_deux',
+    'pagedown',
+
     #myapps
     'blog',
     'about',
     'contact',
-
-    #third-party apps
-    'markdown_deux',
-    'pagedown',
+    'projects',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGIN_REDIRECT_URL = '/'

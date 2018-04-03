@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'', include('blog.urls')),
     url(r'', include('about.urls')),
     url(r'', include('contact.urls')),
+    url(r'', include('projects.urls')),
 ]
