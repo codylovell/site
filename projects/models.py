@@ -5,7 +5,7 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
-class Projects(models.Model):
+class Project(models.Model):
 	title = models.CharField(max_length=200)
 	description = models.TextField()
 	image = models.ImageField()

@@ -24,9 +24,24 @@ h1.card-title {
 	color: #fff;
 }
 
+/* About Me Section */
 .about-me {
 	font-size: 20px;
 	color: #fff;
+}
+
+.about-text {
+	font-size: 30px;
+	color: #af5656
+}
+
+.about-text:link {
+	color: #af5656
+}
+
+.about-text:hover {
+	color: #af5656;
+	text-decoration: none;
 }
 
 /* menu */
@@ -59,10 +74,11 @@ a.nav-link {
 	left: 80%;
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 500px;
+	text-shadow: 6px 2px 2px #d7d7d7;
 }
 
 .header h1{
-	color: #000;
+	color: #fff;
 	font-size: 38pt;
 	text-decoration: none;
 }
@@ -200,4 +216,15 @@ div.card {
 
 div > #id_text_wmd_preview {
 	color: #000;
+}
+
+/* Projects */
+
+.project-photo {
+
+}
+
+.project-description {
+	font-size: 20px;
+	color: #fff;
 }
