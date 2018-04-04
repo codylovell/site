@@ -6,7 +6,7 @@
 	<title>codyLovell.com</title>
 	<!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="{%	static 'blog/css/site.css' %}">
@@ -33,7 +33,7 @@
 	    	{% endif %}
     	</div>
 
-		<nav class="navbar navbar-light bg-dark navbar-expand-lg fixed-top">
+		<nav class="navbar navbar-light bg-dark navbar-expand-lg fixed-top box-shadow">
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -64,7 +64,7 @@
 
 	<div class='container'>
 		<div class="row">
-			<div class="col">
+			<div class="col-8 mx-auto">
 			{% block content %}
 			{% endblock %}
 			</div>

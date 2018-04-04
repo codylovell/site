@@ -2,7 +2,7 @@
 
 {% block content %}
 	{% for post in posts %}
-		<div class="card bg-dark">
+		<div class="card bg-dark box-shadow">
 			<div class="card-title">
 				<p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
 				<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>

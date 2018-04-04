@@ -1,4 +1,8 @@
 /*Main Content*/
+* {
+  box-sizing: border-box;
+}
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -10,6 +14,7 @@ body {
 	background-repeat:no-repeat;
 	background-size:100%;
 	background-attachment: fixed;
+	max-width: 100%;
 	-moz-background-size: 100%; /* Gecko 1.9.2 (Firefox 3.6) */
 	-o-background-size: 100%; /* Opera 9.5 */
 	-webkit-background-size: 100%; /* Safari 3.0 */
@@ -74,7 +79,7 @@ a.nav-link {
 	left: 80%;
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 500px;
-	text-shadow: 6px 2px 2px #d7d7d7;
+	text-shadow: 6px 2px 2px #000;
 }
 
 .header h1{
@@ -118,6 +123,7 @@ p {
 .card {
 	margin-top: 15px;
 	padding: 20px 20px;
+
 }
 
 /* other stuff */
@@ -160,6 +166,12 @@ h1.post-title {
 
 div.card.bg-dark.social-list {
 	font-size: 25px;
+}
+
+.box-shadow {
+/*             |hor|ver||blur| color */
+	box-shadow: 12px 8px 2px #111;
+	margin-bottom: 35px;
 }
 
 /* sidebar 
@@ -220,8 +232,8 @@ div > #id_text_wmd_preview {
 
 /* Projects */
 
-.project-photo {
-
+img {
+	max-width: 100%;
 }
 
 .project-description {
