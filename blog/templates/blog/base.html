@@ -20,20 +20,7 @@
 
 <body>
 
-    <div class='header'>
-    	<!-- glypgicon-plus is bootstrap that displays plus sign. -->
-    	<div class="login">
-	    	{% if user.is_authenticated %}
-	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post <i class="material-icons">add_circle</i></span></a>
-	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts <i class="material-icons">drafts</i></span></a>
-	    	 	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-	    	 {% else %}
-	    	 {% block brand %}{% endblock %}
-	        
-	    	{% endif %}
-    	</div>
-
-		<nav class="navbar navbar-light bg-dark navbar-expand-lg fixed-top box-shadow">
+	<nav class="navbar navbar-light bg-dark navbar-expand-lg fixed-top box-shadow">
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -59,7 +46,20 @@
 				</ul>
 			</div>
 		</nav>
-	</div>
+
+    <div class='header'>
+    	<!-- glypgicon-plus is bootstrap that displays plus sign. -->
+    	<div class="login">
+	    	{% if user.is_authenticated %}
+	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post <i class="material-icons">add_circle</i></span></a>
+	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts <i class="material-icons">drafts</i></span></a>
+	    	 	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+	    	 {% else %}
+	    	 {% block brand %}{% endblock %}
+	        
+	    	{% endif %}
+    	</div>
+    </div>
 
 
 	<div class='container'>
