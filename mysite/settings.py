@@ -25,9 +25,9 @@ SECRET_KEY = 'y23qqf+e-=q&+&$yc$h@&2i1ub3a7^c-s0v&v3zc!$1(6%7k6i'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.codylovell.com']
 
 
 # Application definition
