@@ -9,23 +9,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="{%	static 'blog/css/site.css' %}">
+	<!-- <link rel="stylesheet" href="{%	static 'blog/css/site.css' %}"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link rel="stylesheet" href="{%	static 'blog/css/site2.css' %}">
 
 	{% block head_extra %}{% endblock %}
 </head>
 
 <body>
-
-	<nav class="navbar navbar-light bg-dark navbar-expand-lg fixed-top box-shadow">
-			<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+	<nav class="navbar navbar-expand fixed-top navbar-light bg-dark box-shadow text-white">
+			<div class="brand">
+				{% block brand %}{% endblock %}
+			</div>
+			<!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
-			</button>
+			</button> -->
 			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav flex-column">
+				<ul class="navbar-nav ml-auto">
 					<li class="navbar-item">
 						<a href="{% url 'about' %}" class="nav-link">About</a>
 						<i class="material-icons">face</i>
@@ -47,44 +50,36 @@
 			</div>
 		</nav>
 
-    <div class='header'>
-    	<!-- glypgicon-plus is bootstrap that displays plus sign. -->
-    	<div class="login">
-	    	{% if user.is_authenticated %}
-	    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post <i class="material-icons">add_circle</i></span></a>
-	    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts <i class="material-icons">drafts</i></span></a>
-	    	 	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-	    	 {% else %}
-	    	 {% block brand %}{% endblock %}
-	        
-	    	{% endif %}
-    	</div>
-    </div>
+	<main class="main">
+	<div class='container mx-auto'>
+		<div class="row">		
+		    <div class=''>
+		    	<!-- glypgicon-plus is bootstrap that displays plus sign. -->
+		    	<div class="login">
+			    	{% if user.is_authenticated %}
+			    		<a href="{% url 'post_new' %}" class='top-menu'><span class='btn btn-outline-secondary'>New Post <i class="material-icons">add_circle</i></span></a>
+			    	 	<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="btn btn-outline-secondary">Drafts <i class="material-icons">drafts</i></span></a>
+			    	 	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+			        
+			    	{% endif %}
+		    	</div>
+		    </div>
 
-
-	<div class='container'>
-		<div class="row">
-			<div class="col-8 mx-auto">
-			{% block content %}
-			{% endblock %}
+		    <div class="col-12">
+				{% block content %}
+				{% endblock %}
 			</div>
 		</div>
 	</div>
 
+	</main>
 
 
-<!--Footer-->
-<footer class="page-footer">
-
-
-    <!--Copyright-->
-    <div class="card bg-dark">
-	    <div class="footer-copyright py-3 text-center card-title">
-	        <span class="card-body rounded">© 2018 Copyright:
-	        <a href="https://codylovell.pythonanywhere.com"> codylovell.com </a></span>
-	    
-    <!--/.Copyright-->
-
+<footer class="page-footer mx-auto">
+	<div class="footer-copyright py-3 text-center">
+		<span class="copyright rounded">© 2018 Copyright:
+		<a href="https://codylovell.pythonanywhere.com"> codylovell.com </a></span>
+	</div>	
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.min.js"></script>

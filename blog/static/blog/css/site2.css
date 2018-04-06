@@ -1,0 +1,92 @@
+body {
+  padding-top: 120px;
+}
+
+
+body {
+	height: 100%;
+	background: linear-gradient(#000, transparent 20%),
+				url('../img/background.jpg');
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+p {
+	color: white;
+}
+
+h1 {
+	color: white;
+}
+
+/* menu */
+.navbar{
+	background-color: #FFFFFF; opacity: 0.9; filter: alpha(opacity=80);
+	max-width: 100%;
+	padding-top: 30px;
+	margin: 0;
+}
+
+a.nav-link {
+	font-size: 20px;
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+/* About Me Section */
+.about-me {
+	font-size: 20px;
+	color: #fff;
+}
+
+.about-text {
+	font-size: 30px;
+	color: #af5656
+}
+
+.about-text:link {
+	color: #af5656
+}
+
+.about-text:hover {
+	color: #af5656;
+	text-decoration: none;
+}
+
+.card {
+	margin-top: 15px;
+	padding: 20px 20px;
+
+}
+
+/* Rounded corner solution*/
+.rounded {
+    -moz-border-radius:10px 10px 10px 10px;  // rounds corners for firefox
+    border-radius:10px 10px 10px 10px;  //rounds corners for other browsers
+    border:solid 1px #000;
+    background-color:#acf;
+    padding:10px;
+}
+
+.copyright.rounded {
+	background-color: #343a40;
+	color: white;
+}
+
+footer {
+	position: relative;
+}
+
+.box-shadow {
+/*             |hor|ver||blur| color */
+	box-shadow: 12px 8px 2px #111;
+	margin-bottom: 35px;
+}
