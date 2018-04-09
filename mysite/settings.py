@@ -25,7 +25,7 @@ SECRET_KEY = 'l*$h&5+c66h=ebggq=-qc*sm!b#^&g7htg57+vp3mbp7kb!$xi'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.codylovell.com']
 
