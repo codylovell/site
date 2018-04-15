@@ -19,9 +19,9 @@
 				</div>
 			</h1>
 			<p class="card-body">
-				<article class="project-description">
+				<p class="project-description">
 					{{ project.description | truncatechars:200 }}
-				</article>
+				</p>
 				<a href="{% url 'project_detail' pk=project.pk %}">
 					<button type="button" class="btn btn-primary">Read More</button>
 				</a>
