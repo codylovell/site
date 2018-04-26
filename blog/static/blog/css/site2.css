@@ -93,3 +93,8 @@ footer {
 	box-shadow: 12px 8px 2px #111;
 	margin-bottom: 35px;
 }
+
+/*to make the indentation level apparent in code example.*/
+code {
+	background-color: white;
+}

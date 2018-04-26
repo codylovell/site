@@ -1,5 +1,9 @@
 {% extends 'blog/base.html' %}
 
+{% load markdown_deux_tags	%}
+
+
+
 {% block content %}
 	<div class='card  bg-dark post box-shadow'>
 		{% if post.published_date %}
@@ -19,9 +23,10 @@
 				</a>
 			{% endif %}
 				<h1 class="post-title">{{ post.title }}</h1>
+			
 			</div>
 			<div class="card-body">
-				<p class="content-markdown">{{ post.get_markdown }}</p>
+					<p>{{ post.get_markdown }}</p>
 			</div>
 	</div>
 

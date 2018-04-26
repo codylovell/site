@@ -16,7 +16,6 @@
 			        	</div>
 			        	<h1 class="card-title">{{ post.title }}</a></h1>
 			        	<hr>
-			        	<hr>
 			        	<p class="card-body content-markdown">{{ post.get_markdown|truncatechars:100 }}</p>
 
 			        	<a href="{% url 'post_detail' pk=post.pk %}" class="comments" style="text-decoration: none;">Comments: {{ post.comments.count }} </a>
