@@ -5,6 +5,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 
+from django_markdown.models import MarkdownField
 from markdown_deux import markdown
 
 
@@ -12,7 +13,7 @@ class Post(models.Model):
 	'''Post model'''
 	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 	title = models.CharField(max_length=200)
-	text = models.TextField()
+	text = MarkdownField()
 	created_date = models.DateTimeField(
 		default=timezone.now)
 	published_date = models.DateTimeField(
@@ -23,10 +24,8 @@ class Post(models.Model):
 		self.published_date = timezone.now()
 		self.save()
 
-	def get_markdown(self):
-		text = self.text
-		markdown_text = markdown(text)
-		return mark_safe(markdown_text)
+	def save(self, *args, **kwargs):
+		self.text = markdown.markdown(self.text)
 
 
 	def __str__(self):

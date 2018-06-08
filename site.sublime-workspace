@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"ba",
+				"background-color"
+			]
 		]
 	},
 	"buffers":
@@ -25,34 +29,84 @@
 			}
 		},
 		{
-			"file": "blog/templates/blog/base.html",
+			"file": "mysite/urls.py",
 			"settings":
 			{
-				"buffer_size": 3990,
+				"buffer_size": 1200,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "",
-			"file": "/home/chuckfinleyyp/site",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "mysite/settings.py",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 3497,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "{% extends 'blog/base.html' %}\n\n{% load markdown_deux_tags\t%}\n\n\n\n{% block content %}\n\t<div class='card  bg-dark post box-shadow'>\n\t\t{% if post.published_date %}\n\t\t\t<div class=\"card-title\">\n\t\t\t\t<div class='date'>\n\t\t\t\t\t{{ post.published_date }}\n\t\t\t\t</div>\n\t\t\t{% else %}\n\t\t\t\t<a class=\"btn btn-default\" href=\"{% url 'post_publish' pk=post.pk %}\">Publish</a>\n\t\t\t{% endif %}\n\t\t\t{% if user.is_authenticated %}\n\t\t\t\t<a type=\"button\" class='btn btn-outline-secondary' href=\"{% url 'post_edit' pk=post.pk %}\">\n\t\t\t\t<span class=''>Edit</span>\n\t\t\t\t</a>\n\t\t\t\t<a type=\"button\" class=\"btn btn-outline-secondary\" href=\"{% url 'post_remove' pk=post.pk %}\">\n\t\t\t\t\t<span class=\"\">Delete</span>\n\t\t\t\t</a>\n\t\t\t{% endif %}\n\t\t\t\t<h1 class=\"post-title\">{{ post.title }}</h1>\n\t\t\t\n\t\t\t</div>\n\t\t\t<div class=\"card-body\">\n\t\t\t\t{% markdown\t%}\n\t\t\t\t\t<p>{{ post }}</p>\n\t\t\t\t{% endmarkdown %}\n\t\t\t</div>\n\t</div>\n\n\t<hr>\n\t<a type=\"button\" class=\"btn btn-outline-secondary\" href=\"{% url 'add_comment_to_post' pk=post.pk %}\">Add comment</a>\n\t{% for comment in post.comments.all %}\n\t\t{% if user.is_authenticated or comment.approved_comment %}\n\t\t\t<div class=\"comment\">\n\t\t\t\t<div class=\"date\">{{ comment.created_date }}\n\t\t\t\t{{ comment.created_date }}\n\t\t\t\t{% if not comment.approved_comment %}\n\n\t                <a class=\"btn btn-default\" href=\"{% url 'comment_remove' pk=comment.pk %}\"><span class=\"remove\">Remove</span></a>\n\t                <a class=\"btn btn-default\" href=\"{% url 'comment_approve' pk=comment.pk %}\"><span class=\"ok\">Approve</span></a>\n\t            {% endif %}\n\t            </div>\n\t\t\t\t\n\t\t\t\t<strong class='user'>{{ comment.author }}</strong>\n\t\t\t\t<p>{{ comment.text|linebreaks }}</p>\n\t\t\t</div>\n\t\t{% endif %}\n\t{% empty %}\n\t\t<p>No user comments yet.</p>\n\t{% endfor %}\n{% endblock %}",
 			"file": "blog/templates/blog/post_detail.html",
-			"file_size": 1670,
-			"file_write_time": 131691553467297274,
 			"settings":
 			{
-				"buffer_size": 1743,
+				"buffer_size": 1683,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog/templates/blog/post_edit.html",
+			"settings":
+			{
+				"buffer_size": 274,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "about/templates/about/about.html",
+			"settings":
+			{
+				"buffer_size": 1181,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog/templates/blog/post_list.html",
+			"settings":
+			{
+				"buffer_size": 943,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog/static/blog/css/site2.css",
+			"settings":
+			{
+				"buffer_size": 1562,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog/models.py",
+			"settings":
+			{
+				"buffer_size": 1247,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n# Getting python\n\n## Windows\n\n- To get python in windows just go. [Here](https://www.python.org/downloads/)\n- Choose which version you would like (either 2 or 3).\n- If your not sure which version to use, then I would just use 3.\n- Run through the installer.\n\n## Linux-Ubuntu\n\n- Python 2.x should come with your distrobution of linux\n### Python 3\n- There are many methods for aquiring python3, and they are different amoung all operating systems and linux flavors\nbut if your not sure this is a [good starting point.](https://www.google.com/search?source=hp&ei=I1HfWv32E8uazwLazI7YDg&q=python3+linux&oq=python3+linux&gs_l=psy-ab.3..35i39k1j0l2j0i22i30k1j0i22i10i30k1l6.5200.9000.0.9600.15.14.0.0.0.0.100.1100.2j11.14.0..2..0...1.1.64.psy-ab..1.14.1200.6..0i131k1j0i131i20i264k1j0i20i264k1j0i10k1.100.MqcTYhI_sPM)\n\n### For ubuntu\n- One way is to add a ppa and install from that:\n\t> sudo add-apt-repository ppa:jonathonf/python-3.6\n\t> sudo apt-get update\n\t> sudo apt-get install python3.6\n- To test to see if it worked, check the python version like:\n\t> python3 --version\n- To check the default python version just leave off 3.\n\t> python --version\n\n# Getting a Text Editor\n## Text Editors\n- There are a crap ton of text editors out there and everyone(including me) will tell you that the one they use is the best but I think it's more important that you just get used to one so you can focus on what you are trying to learn first. So just do a Search for [text editors](https://www.google.com/search?source=hp&ei=h2_fWubFF8PazwLX27ToBw&q=text+editors&oq=text+editors&gs_l=psy-ab.3..0j0i20i263i264k1j0l8.2100.4900.0.5100.14.13.0.0.0.0.100.900.3j9.13.0..2..0...1.1.64.psy-ab..1.13.1000.6..35i39k1j0i131k1j0i131i20i264k1j0i67k1j0i131i67k1j0i10i67k1j0i20i264k1.100.Wvq96A6sXQM) and choose whatever one seems to agree with you.\n\n### A note on command line text editors\n- They are vi, vim, emacs and while they are powerful, if your just starting out I would ***not*** try to use these guys just yet as it'll just add uneeded complexity to a task that already has plenty of  that to go around.\n\n# Creating a .py File\n- Make a new file in whatever directory you would prefer.\n\n\t\tdef hello_world():\n\t\t    print('hello world!!!')\n\n\t\tif __name__ == '__main__':\n\t\t    hello_world()\n\t\t\t    \n- note that the indentation does matter, it should be 2 or 4 spaces, does not matter which but they have to be consistent.\n- Filename does not matter much, just make sure the file extension is .py\n- Try to aviod using spaces in file names, technically you can, but it just gives you more typing to do.\n\n# Command Line Basics\n## The Command Line\n- Not as scary as you think, in Linux and Mac the default shell is BASH, and in Windows I would reccomend using [cygwin](https://www.cygwin.com/) which is a unix-like command prompt for windows.\n- To open the terminal just go to your applications and look for 'terminal'\n- Or you can Alt + Space and search for 'terminal'\n- And you might already of a shortcut Alt + Crl + T to open a terminal(Not on all flavors of linux but you can always set these up in system settings somewhere.\n\n\n## What you'll see\n- The first thing you'll see is probably something like:\n\t> username@PC-NAME:~/cur/dir$  \n- This is the primary prompt string, and it may look a little complicated at first but its really just your username and computername followed by a colon and then your current working directory(which you can find out by running 'pwd' (no quotes) in the command prompt. \n\t> ~\n\t\n\t\t> This symbol represents your home directory\n\t\t> Ussually something like '/home/username'\n\n## Moving around your system\n- So you will be suprised by how quickly you can start to get accustomed to the command line if you start using it. With just a handful of commands you can move anywhere on your computer you want, and run a python program you have created.\n### List of essintial commands to start with\n\t- ls\n\t- cd\n\t- pwd\n### pwd command\n___\n- Running pwd will print out the directory you are currently in.\n### ls command\n___\n- Running ls will list all of the files and directories in your current working directory.\n- use the -a flag after the ls command like:\n>ls -a\n\n\twill list all files and folders including the hidden ones.\n\n### cd command\n___\n- The cd command will change directories to the directory specified by the argument after the cd command like:\n> cd directory_name\n\t\n\t> where 'directory_name' is the argument (the directory you want to change in to.)  \n\n## Arguments\n- After you issue a command most commands will need further information in order to do what they were meant to do.\n- To do so just seperate the command name from the argument with a space:\n> ls /a/dir\n\t\t\n\t\t> ls  - is the command\n\t\t> /a/dir -  is the argument, in  this case a directory\n\t\t> So this command will list the files and directories for the folder dir located in the a folder.\n\t\t\n# Running .py Files\n- To run a .py file all we have to do is use the python command followed by the path of the python file like:\n\n\t\tpython /path/to/python_file.py\n\n- Or if we use our new founded command line chops:\n\n\t\tcd path/to/\n\t\tpython python_file.py\n\t\n\nThis is my very first attempt at creating a tutorial of any kind, so if you have any suggestions or comments please send me a [message](mailto:codylovell94@gmail.com)\n<!--stackedit_data:\neyJoaXN0b3J5IjpbNjc4MjQxMDQ2LDE1NTc0Njg5NTcsLTE0Nz\nY2MTA1MywtMTI3MDM5NjI1OF19\n-->",
+			"file": "/tmp/mozilla_chuckfinleyyp0/begginer_programming_tutorial.txt",
+			"file_size": 5390,
+			"file_write_time": 131692173917482592,
+			"settings":
+			{
+				"buffer_size": 5395,
 				"line_ending": "Unix"
 			}
 		}
@@ -90,13 +144,15 @@
 	"expanded_folders":
 	[
 		"/home/chuckfinleyyp/Development/Python/Django/site",
-		"/home/chuckfinleyyp/Development/Python/Django/site/blog",
-		"/home/chuckfinleyyp/Development/Python/Django/site/blog/templates",
-		"/home/chuckfinleyyp/Development/Python/Django/site/blog/templates/blog",
+		"/home/chuckfinleyyp/Development/Python/Django/site/about",
+		"/home/chuckfinleyyp/Development/Python/Django/site/about/templates",
+		"/home/chuckfinleyyp/Development/Python/Django/site/about/templates/about",
 		"/home/chuckfinleyyp/Development/Python/Django/site/mysite"
 	],
 	"file_history":
 	[
+		"/home/chuckfinleyyp/site",
+		"/home/chuckfinleyyp/.profile",
 		"/home/chuckfinleyyp/Development/Python/Django/site/site.sublime-workspace"
 	],
 	"find":
@@ -160,7 +216,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -188,70 +244,73 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "blog/templates/blog/base.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3990,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 663.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/chuckfinleyyp/site",
+					"file": "mysite/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1200,
+								1200
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "mysite/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1222,
+								1222
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -260,15 +319,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1743,
+						"buffer_size": 1683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								58,
-								58
+								283,
+								283
 							]
 						],
 						"settings":
@@ -281,6 +340,185 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "blog/templates/blog/post_edit.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "about/templates/about/about.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1181,
+								1181
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "blog/templates/blog/post_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								943,
+								943
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "blog/static/blog/css/site2.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1532,
+								1532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 9,
+					"file": "blog/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/tmp/mozilla_chuckfinleyyp0/begginer_programming_tutorial.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5395,
+								5395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -309,12 +547,19 @@
 				0,
 				2,
 				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.805875227135,
+			0.264924913362,
+			0.66,
 			1.0
 		],
 		"rows":
@@ -362,7 +607,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
